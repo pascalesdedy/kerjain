@@ -1,1 +1,2 @@
 <p><%= kerjaan_item.content %></p>
+<%= link_to "Delete", daftar_kerjaan_kerjaan_item_path(@daftar_kerjaan, kerjaan_item.id), method: :delete, data: { confirm: "Are you sure?" } %>
