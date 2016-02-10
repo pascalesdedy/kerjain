@@ -1,0 +1,21 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @daftar_kerjaan.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @daftar_kerjaan.description %>
+</p>
+
+<div id="kerjaan_items_wrapper">
+  <%= render @daftar_kerjaan.kerjaan_items %>
+  <div id="form">
+      <%= render "kerjaan_items/form" %>
+  </div>
+</div>
+
+<%= link_to 'Edit', edit_daftar_kerjaan_path(@daftar_kerjaan) %> |
+<%= link_to 'Back', daftar_kerjaans_path %>

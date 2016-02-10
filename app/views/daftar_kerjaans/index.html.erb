@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Daftar Kerjaans</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Description</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @daftar_kerjaans.each do |daftar_kerjaan| %>
+      <tr>
+        <td><%= daftar_kerjaan.title %></td>
+        <td><%= daftar_kerjaan.description %></td>
+        <td><%= link_to 'Show', daftar_kerjaan %></td>
+        <td><%= link_to 'Edit', edit_daftar_kerjaan_path(daftar_kerjaan) %></td>
+        <td><%= link_to 'Destroy', daftar_kerjaan, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Daftar kerjaan', new_daftar_kerjaan_path %>

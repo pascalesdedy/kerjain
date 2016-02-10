@@ -1,0 +1,4 @@
+<%= form_for([@daftar_kerjaan, @daftar_kerjaan.kerjaan_items.build]) do |f| %>
+  <%= f.text_field :content, placehoder: "Kerjaan baru" %>
+  <%= f.submit %>
+<% end %>
